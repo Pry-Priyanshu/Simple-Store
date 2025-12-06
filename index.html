@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Store</title>
+    <!-- Remix Icon for Cart -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Simple<span>Store</span>.</a>
+            <div class="nav-actions">
+                <button id="cart-btn" class="cart-btn">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Minimalist Essentials</h1>
+            <p>Curated products for your everyday life.</p>
+            <a href="#products" class="btn btn-primary">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- Product Grid -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Latest Arrivals</h2>
+            <div id="product-grid" class="product-grid">
+                <!-- Products injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="cart-overlay">
+        <aside class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Bag</h3>
+                <button id="close-cart" class="close-btn"><i class="ri-close-line"></i></button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items injected via JS -->
+                <div class="empty-cart-msg">Your bag is empty.</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button id="checkout-btn" class="btn btn-block btn-primary">Checkout</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
